@@ -1,2 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
+
+@font-face {
+  font-family: neurial-grotesk;
+  src: url("./fonts/Fontspring-DEMO-neurialgrotesk-regular.otf");
+}
+
+.auth-btn{
+    /* font-family: neurial-grotesk;
+    font-weight: 500;
+    font-size: 20px; */
+}
+
+@theme{
+    --font-sansita:  "Sansita", serif;
+    
+}
