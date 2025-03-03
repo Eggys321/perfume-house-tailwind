@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import SignIn from "./auth/SignIn";
 import SignUp from "./auth/SignUp";
 
+
 function App() {
   return (
     <>
@@ -15,9 +16,9 @@ function App() {
           <Route element={<Navbar />}>
             <Route path="/" element={<Home />} />
           </Route>
-
           <Route path="/auth/sign-in" element={<SignIn/>} />
           <Route path="/auth/sign-up" element={<SignUp/>}/>
+
         </Routes>
       </BrowserRouter>
     </>

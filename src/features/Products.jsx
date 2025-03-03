@@ -1,22 +1,29 @@
 import React from "react";
+import { products } from "../product";
 
 const Products = () => {
   return (
     <>
-      <main>
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eius
-          perferendis, temporibus eligendi eos ullam quis fugit necessitatibus
-          commodi aut fugiat harum ut ratione molestias ab laudantium corrupti
-          itaque quibusdam repellat eum corporis odio. Corrupti commodi non,
-          earum architecto sit atque quidem rem accusantium pariatur cumque
-          libero porro repudiandae facilis voluptatum, cum iusto in? Nisi eaque
-          magni quis doloribus dolore minima, mollitia vel, temporibus provident
-          pariatur atque ut consequatur repellendus quam aliquid eum
-          dignissimos! Aperiam inventore quasi voluptate veniam ducimus tempora
-          rerum repudiandae deserunt officia ratione vero eum quos, perspiciatis
-          temporibus ut consequatur dolorem numquam ipsum atque ullam, fugit a?
-        </h2>
+      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+        {products.map((product) => {
+          const { title, image, id, price } = product;
+          return (
+              <div key={id} className="card bg-base-100 shadow-lg">
+                <figure>
+                  <img src={image} alt={title} className="w-full"  loading="lazy" />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">{title} </h2>
+                  <p className="text-[#8D34FF]">#{price}</p>
+                  <div className="card-actions">
+                    <button className="btn bg-[#8D34FF] text-[#FEFEFF] w-full">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+          );
+        })}
       </main>
     </>
   );

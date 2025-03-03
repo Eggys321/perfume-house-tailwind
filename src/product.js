@@ -1,4 +1,4 @@
-[
+export const products = [
     {   
         id:1,
         image:"https://res.cloudinary.com/eguono/image/upload/v1724144617/perfume%20house%20jpg/Ralph_Lauren_Perfume_z8v8mw.jpg",

@@ -13,7 +13,13 @@
     font-size: 20px; */
 }
 
+.ss{
+  /* @apply container mx-auto p-[25px] md:px-[15px] lg:py-[33px] lg:px-[99px] lg:grid grid-cols-3 gap-8 min-h-screen */
+}
+
 @theme{
     --font-sansita:  "Sansita", serif;
     
 }
+
+
