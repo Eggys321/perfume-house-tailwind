@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import navLogo from "../assets/Group 9283.svg";
 import AuthBtn from "../components/AuthBtn";
 import menuImg from "../assets/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg";
+import menuCloseImg from "../assets/closemenuimg.png"
 
 const Navbar = () => {
+  const [isClicked,setIsClicked] = useState(false)
+  function toggleImg(){
+    // alert(1234)
+    isClicked ? setIsClicked(false) : setIsClicked(true)
+
+  }
   return (
     <>
       <nav className="container mx-auto p-[25px] md:px-[15px] lg:py-[33px] lg:px-[99px] flex justify-between items-center">
@@ -23,9 +30,9 @@ const Navbar = () => {
           </div>
           {/* div for menu / hamburger img */}
           <div className="md:hidden ">
-            <div className="dropdown dropdown-end ">
-              <div tabIndex={0} role="button" className="">
-                <img src={menuImg} alt="menu-img" />
+            <div className="dropdown dropdown-end " >
+              <div   tabIndex={0} role="button" className="">
+                <img src={menuImg} alt="menu-img" /> 
                 {/* Click ⬇️ */}
               </div>
               <ul

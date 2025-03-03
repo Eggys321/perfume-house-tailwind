@@ -17,9 +17,16 @@
   /* @apply container mx-auto p-[25px] md:px-[15px] lg:py-[33px] lg:px-[99px] lg:grid grid-cols-3 gap-8 min-h-screen */
 }
 
+.main-wrapper{
+  /* @apply bg-[url("./assets/auth-bgrc.png")] h-screen bg-no-repeat bg-cover */
+}
 @theme{
     --font-sansita:  "Sansita", serif;
     
+}
+
+input{
+  @apply border-[2.5px] border-gray-300  rounded-lg
 }
 
 
